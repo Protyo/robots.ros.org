@@ -1,6 +1,14 @@
 {% include header-default.html %}
 
 {% if page.icon %}
+<!-- {{ page.color }} -->
+{% if page.color %}
+{% capture include_to_sassify %}
+{% include header-post.sass %}
+{% endcapture %}
+<style>{{ include_to_sassify | sassify }}</style>
+<!--<link rel="stylesheet" href="{{ "/assets/css/header-post.css" | prepend: site.baseurl }}"-->
+{% endif %}
 <header class="header-post" role="banner">
   <div class="postflex">
   <div class="infobox container" style="align: center;">

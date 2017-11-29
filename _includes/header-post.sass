@@ -1,0 +1,19 @@
+// darken and lighten doesn't work. Maybe try scss?
+//$darker: darken( #{' {{ page.color }} '}, 20%)
+//$lighter: lighten( $#{' {{ page.color }} ', 20%)
+
+$color: #{' {{ page.color }} '}
+
+.header-post
+  background-color: $color !important
+
+.postflex div, .postflex div img 
+  border-color: $color !important 
+
+
+//  @if (unquote('"lightness($color)" < 50'))
+//    $border-color: unquote('darken($color, 20%)')
+//  @else
+//    $border-color: unquote('lighten($color, 20%)')
+ 
+
